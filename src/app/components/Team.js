@@ -17,9 +17,9 @@ const teamMembers = [
   },
   {
     id: 2,
-    name: 'Keleab ALemayehu',
+    name: 'Keleab Solomon',
     role: 'Full stack and Mobile App Developer',
-    image: '/logo.png',
+    image: '/kaleab.jpg',
     linkedin: 'https://linkedin.com/in/Kalab',
     twitter: 'https://twitter.com/Kalab',
     profile: 'https://example.com/Kalab',
@@ -28,7 +28,7 @@ const teamMembers = [
     id: 3,
     name: 'Biruk Getachew',
     role: 'Mern stack with Ai',
-    image: '/0K1A1632.jpg',
+    image: '/156351009.jpg',
     linkedin: 'https://linkedin.com/in/Kaleb',
     twitter: 'https://twitter.com/Kaleb',
     profile: 'https://example.com/Kaleb',
@@ -38,6 +38,15 @@ const teamMembers = [
     name: 'Kaleab Alemayehu',
     role: ' Full stack Developer',
     image: '/logo.png',
+    linkedin: 'https://linkedin.com/in/birukf',
+    twitter: 'https://twitter.com/birukf',
+    profile: 'https://example.com/birukf',
+  },
+  {
+    id: 5,
+    name: 'Keku kellemwork',
+    role: ' Marketing Manager and Video Editor',
+    image: '/keku.jpg',
     linkedin: 'https://linkedin.com/in/birukf',
     twitter: 'https://twitter.com/birukf',
     profile: 'https://example.com/birukf',
@@ -55,7 +64,7 @@ const Team = ({isVisible}) => {
     }`}
     id="team"
   >
-      <h2 className="text-3xl font-semibold text-center mb-8">Our Team</h2>
+      <h2 className="text-3xl  text-gray-800 font-semibold text-center mb-8">Our Team</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
         {teamMembers.map((member) => (
           <div

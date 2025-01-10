@@ -1,37 +1,37 @@
 import React from 'react';
 
 const teamMembers = [
+
   {
     id: 1,
-    name: 'Hotel Booking',
-    role: 'Canu',
-    image: '/logo.png',
-    linkedin: 'https://linkedin.com/in/Nahom',
-    twitter: 'https://twitter.com/Nahom',
-    profile: 'https://example.com/Nahom',
-  },
-  {
-    id: 2,
-    name: 'Lucky Me',
-    role: 'Our Project',
+    name: 'Lucky Me Platform',
+    role: 'On develoment',
     image: '/logo.png',
     linkedin: 'https://linkedin.com/in/Kalab',
     twitter: 'https://twitter.com/Kalab',
     profile: 'https://example.com/Kalab',
   },
   {
-    id: 3,
-    name: 'Gion Delivery',
-    role: 'Our Project',
+    id: 2,
+    name: 'Gion Food Delivery',
+    role: 'On development',
     image: '/logo.png',
     linkedin: 'https://linkedin.com/in/Kaleb',
     twitter: 'https://twitter.com/Kaleb',
     profile: 'https://example.com/Kaleb',
   },
   {
-    id: 4,
+    id: 3,
     name: 'Tana Transport System',
-    role: 'Bahir Dar City',
+    role: 'On Development',
+    image: '/logo.png',
+    linkedin: 'https://linkedin.com/in/birukf',
+    twitter: 'https://twitter.com/birukf',
+    profile: 'https://example.com/birukf',
+  },
+    {id: 4,
+    name: ' Daga Buisness Group',
+    role: 'On Production',
     image: '/logo.png',
     linkedin: 'https://linkedin.com/in/birukf',
     twitter: 'https://twitter.com/birukf',
@@ -47,7 +47,7 @@ const Team = ({isVisible}) => {
     }`}
     id="project"
   >
-      <h2 className="text-3xl font-semibold text-center mb-8">Our Projects</h2>
+      <h2 className="text-3xl font-semibold  text-gray-800 text-center mb-8">Our Next Step</h2>
       <div className="grid grid-cols-1 place-items-center sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
         {teamMembers.map((member) => (
           <div

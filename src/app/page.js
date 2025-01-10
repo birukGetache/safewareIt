@@ -13,7 +13,9 @@ export default function Home() {
   const [visibleSections, setVisibleSections] = useState({});
 
   useEffect(() => {
+    //selecte all section on pages
     const sections = document.querySelectorAll("section");
+    //
     const observer = new IntersectionObserver(
       (entries) => {
         const newVisibleSections = { ...visibleSections }; // Copy the current visibleSections state
@@ -28,7 +30,7 @@ export default function Home() {
         });
         setVisibleSections(newVisibleSections); // Update the state with visibility info
       },
-      { threshold: [0.5, 1] } // Monitor both when 50% and 100% of the section is visible
+      { threshold: [0.2, 1] } // Monitor both when 50% and 100% of the section is visible
     );
 
     sections.forEach((section) => observer.observe(section));
@@ -44,7 +46,7 @@ export default function Home() {
         <Text />
       </div>
 
-      <div className="relative mt-[calc(100vh)] sm:mt-0">
+      <div className="relative sm:mt-20 md:mt-20">
         <About isVisible={visibleSections.about} />
       </div>
       <Services isVisible={visibleSections.services} />

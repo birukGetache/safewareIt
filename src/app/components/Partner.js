@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 const PartnerCard = ({ partner }) => {
   return (
@@ -32,42 +32,48 @@ const PartnerCard = ({ partner }) => {
 };
 
 const PartnerPage = ({isVisible}) => {
+  const [length , setLength] = useState(0);
   const partners = [
     {
-      name: 'Partner 1',
+      name: 'Bit ',
       description:
-        'Partner 1 is a leading provider of innovative solutions with a focus on technology-driven growth.',
-      logoUrl: 'https://via.placeholder.com/150',
+        'Bit carear is a leading provider of innovative solutions with a focus on technology-driven growth.',
+      logoUrl: '/bit.jpg',
       link: 'https://www.partner1.com',
     },
-    {
-      name: 'Partner 1',
-      description:
-        'Partner 1 is a leading provider of innovative solutions with a focus on technology-driven growth.',
-      logoUrl: 'https://via.placeholder.com/150',
-      link: 'https://www.partner1.com',
-    },
-    {
-      name: 'Partner 1',
-      description:
-        'Partner 1 is a leading provider of innovative solutions with a focus on technology-driven growth.',
-      logoUrl: 'https://via.placeholder.com/150',
-      link: 'https://www.partner1.com',
-    },
+   
   ];
 
+  useEffect(()=>{
+   if(partners.length ==1){
+    setLength(1)
+   }
+   if(partners.length == 2){
+    setLength(2)
+   }
+   else{
+    setLength(partners.length)
+   }
+  },[])
   return (
     <section
-    className={`container mx-auto px-4 py-12 service transition-opacity duration-500 ease-in-out ${
+    className={`container mx-auto px-4 py-12 service transition-opacity duration-500 ease-in-out flex items-center justify-center ${
       isVisible ? "opacity-100 animate-serviceanime" : "opacity-0"
     }`}
+    
     id="partner"
   >
       <div className="container mx-auto px-4">
         <h1 className="text-4xl font-semibold text-center text-gray-800 mb-12">
           Our Trusted Partners
         </h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+        <div   className={`grid ${
+        length == 1
+          ? "place-items-center grid-cols-1 md:grid-cols-1 lg:grid-cols-1"
+          : length == 2
+          ? "place-items-center gap-12 grid-cols-1 md:grid-cols-2 lg:grid-cols-2"
+          : "gap-12 justify-between grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
+      }  min-h-screen`}>
           {partners.map((partner, index) => (
             <PartnerCard key={index} partner={partner} />
           ))}

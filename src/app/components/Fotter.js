@@ -1,5 +1,6 @@
 import React from 'react';
-
+import { FaInstagram, FaTelegramPlane, FaLinkedin , FaPhone , FaEnvelope } from 'react-icons/fa';
+import Map from './Map';
 const Footer = () => {
   const footerLinks = [
     { name: 'About Us', href: '#about' },
@@ -27,11 +28,12 @@ const Footer = () => {
         </div>
 
         {/* Section 2: Links (Mapping through items) */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+        <div className='grid lg:grid-cols-3  md:grid-cols-2 sm:grid-cols-1 gap-3 mb-10'>
+        <div className="grid gap-6 mb-12 h-full p-10 rounded-md bg-white bg-opacity-10">
+          <p className="text-gray-800 hover:text-white">Quick Links</p>
           {footerLinks.map((link, index) => (
             <div key={index}>
-              <h3 className="text-xl font-semibold text-gray-300 mb-4">{link.name}</h3>
-              <ul className="space-y-2">
+              <ul >
                 <li>
                   <a href={link.href} className="text-gray-400 hover:text-white">
                     {link.name}
@@ -41,23 +43,36 @@ const Footer = () => {
             </div>
           ))}
         </div>
+        <div className='box-border rounded-md overflow-hidden w-full h-96'>
+  <Map />
+</div>
 
+
+
+
+        <div className='bg-white bg-opacity-10 rounded-md flex flex-col items-start p-10 text-white justify-center'>
+        <div className='flex'>
+    <FaPhone size={20} />
+    <a href="tel:0983446134" className="ml-2">
+      0983446134
+    </a>
+  </div>
+  <div className="mt-2 flex">
+    <FaEnvelope size={20}/>
+    <a href="mailto:nahomkeneni4@gmail.com" className="ml-2">
+      nahomkeneni4@gmail.com
+    </a>
+  </div>  
+        </div>
+        </div>
         {/* Section 3: Form */}
         <div className="bg-gray-700 rounded-lg p-8">
-          <h3 className="text-2xl font-semibold text-center text-gray-300 mb-6">Subscribe to Our Newsletter</h3>
-          <form className="flex flex-col items-center">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="px-4 py-2 mb-4 w-full max-w-xs rounded-lg text-gray-800"
-            />
-            <button
-              type="submit"
-              className="px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700"
-            >
-              Subscribe
-            </button>
-          </form>
+          <h3 className="text-2xl font-semibold text-center text-gray-300 mb-6">Subscribe to Our Socail Media Pages</h3>
+        <div className='grid grid-cols-3 gap-10 place-items-center mx-auto max-w-32'>
+         <a><FaInstagram size={40}/></a>
+         <a><FaTelegramPlane size={40}/></a>
+         <a><FaLinkedin size={40}/></a>
+         </div>
         </div>
       </div>
     </footer>
