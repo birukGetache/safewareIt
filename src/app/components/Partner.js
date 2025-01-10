@@ -2,7 +2,7 @@ import React from 'react';
 
 const PartnerCard = ({ partner }) => {
   return (
-    <div className="max-w-xs mx-auto bg-white bg-opacity-10 rounded-lg shadow-xl overflow-hidden mb-8">
+    <div className="max-w-xs mx-auto bg-white bg-opacity-10 rounded-full p-10  shadow-xl overflow-hidden mb-8  border-green-600 " style={{borderWidth:"3px"}}>
       {/* Partner Logo */}
       <img
         src={partner.logoUrl}
@@ -27,17 +27,11 @@ const PartnerCard = ({ partner }) => {
           Visit Website
         </a>
       </div>
-
-      <div className="px-6 py-4 bg-gray-100">
-        <p className="text-gray-500 text-sm">
-          Our valued partner, committed to collaboration and innovation.
-        </p>
-      </div>
     </div>
   );
 };
 
-const PartnerPage = () => {
+const PartnerPage = ({isVisible}) => {
   const partners = [
     {
       name: 'Partner 1',
@@ -47,37 +41,28 @@ const PartnerPage = () => {
       link: 'https://www.partner1.com',
     },
     {
-      name: 'Partner 2',
+      name: 'Partner 1',
       description:
-        'Partner 2 excels in offering high-quality services in the field of finance and consulting.',
+        'Partner 1 is a leading provider of innovative solutions with a focus on technology-driven growth.',
       logoUrl: 'https://via.placeholder.com/150',
-      link: 'https://www.partner2.com',
+      link: 'https://www.partner1.com',
     },
     {
-      name: 'Partner 3',
+      name: 'Partner 1',
       description:
-        'Partner 3 specializes in creating cutting-edge designs and bringing creative visions to life.',
+        'Partner 1 is a leading provider of innovative solutions with a focus on technology-driven growth.',
       logoUrl: 'https://via.placeholder.com/150',
-      link: 'https://www.partner3.com',
-    },
-    {
-      name: 'Partner 4',
-      description:
-        'Partner 4 focuses on advancing sustainable solutions for industries in need of eco-friendly practices.',
-      logoUrl: 'https://via.placeholder.com/150',
-      link: 'https://www.partner4.com',
-    },
-    {
-      name: 'Partner 5',
-      description:
-        'Partner 5 is a technology firm dedicated to offering software solutions that enhance operational efficiency.',
-      logoUrl: 'https://via.placeholder.com/150',
-      link: 'https://www.partner5.com',
+      link: 'https://www.partner1.com',
     },
   ];
 
   return (
-    <div className="min-h-screen  py-12">
+    <section
+    className={`container mx-auto px-4 py-12 service transition-opacity duration-500 ease-in-out ${
+      isVisible ? "opacity-100 animate-serviceanime" : "opacity-0"
+    }`}
+    id="partner"
+  >
       <div className="container mx-auto px-4">
         <h1 className="text-4xl font-semibold text-center text-gray-800 mb-12">
           Our Trusted Partners
@@ -88,7 +73,7 @@ const PartnerPage = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

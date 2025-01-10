@@ -11,6 +11,20 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      keyframes: {
+        aboutanime: {
+          from: { transform: "translateY(300px)" },
+          to: { transform: "translateX(0px)" },
+        },
+        serviceanime: { // Move this inside the `keyframes` object
+          from: { transform: "translateY(300px)" },
+          to: { transform: "translateX(0px)" },
+        },
+      },
+      animation: {
+        aboutanime: "aboutanime 1s ease-out", // Customize duration and easing as needed
+        serviceanime: "serviceanime 1s ease-out",
+      },
     },
   },
   plugins: [],

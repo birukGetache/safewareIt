@@ -10,6 +10,8 @@
     padding-right: 70px;
 }
 
+/* Mobile-specific adjustments */
+
   
   .svg {
     width: 100%;
@@ -17,6 +19,16 @@
     margin-top:-80px;
     height: fit-content;
     animation: moveLine 4s linear infinite; /* Optional movement for the line */
+  }
+
+  @media (max-width: 640px) {
+    .container{
+      grid-template-columns: 1fr;
+    }
+    .svg {
+      max-width: 400px;
+      margin-top:10px;
+    }
   }
   
   /* Optional: Uncomment if you want to animate the line 

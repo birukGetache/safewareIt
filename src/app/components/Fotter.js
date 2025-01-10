@@ -14,14 +14,14 @@ const Footer = () => {
         {/* Section 1: Logo and Description */}
         <div className="flex flex-col md:flex-row items-center justify-between mb-12">
           <div className="flex items-center space-x-4">
-            <img src="/logo.jpg" alt="Logo" className="w-24 h-24 rounded-full" />
+            <img src="/logo.png" alt="Logo" className="w-24 h-24 rounded-full" />
             <p className="text-lg text-gray-300">
               Your trusted partner for innovative solutions. We deliver excellence in every project.
             </p>
           </div>
           <div className="mt-6 md:mt-0">
             <p className="text-gray-400 text-sm text-center md:text-left">
-              © {new Date().getFullYear()} Safeware. All rights reserved.
+              © {new Date().getFullYear()} Gion. All rights reserved.
             </p>
           </div>
         </div>
